@@ -1,10 +1,11 @@
 # 🔬 Skin Cancer Detection Using Machine Learning
 
-A full-stack, clinical-engineering web application for automated dermatological screening of skin lesions using **Computer Vision (OpenCV)** and a **Support Vector Machine (SVM)** machine learning classifier.
+A full-stack, clinical-engineering web application for automated dermatological screening of skin lesions using **Computer Vision (OpenCV)**, **Classical Machine Learning (SVM, Gradient Boosting, Random Forest, Logistic Regression, KNN)**, and **Deep Learning Transfer Learning Architectures (ResNet50, MobileNetV2, Custom CNN, VGG16, EfficientNetB0)**.
 
-The system allows users to upload dermoscopic skin lesion images through an intuitive, interactive web dashboard, preprocesses images with medical-grade image enhancement and hair-removal algorithms, extracts physiological **ABCD** (Asymmetry, Border, Color, Diameter/Texture) features, classifies the lesion as **Benign** or **Malignant**, logs results to an SQL database, and displays verified performance metrics and confusion matrices dynamically fetched from the model.
+The system allows users to upload dermoscopic skin lesion images through an intuitive, interactive web dashboard, preprocesses images with medical-grade image enhancement and hair-removal algorithms, extracts physiological **ABCD** features, benchmarks deep learning models with zero data leakage, classifies lesions with high clinical sensitivity, logs results to a persistent database, and displays verified performance metrics, ROC/PR curves, and confusion matrices dynamically fetched from the models.
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/nazrinaminaah43-alt/skin-cancer-detection)
+
 
 ---
 

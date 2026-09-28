@@ -1,32 +1,31 @@
 {
-  "model_name": "Support Vector Machine (SVM)",
-  "kernel": "Radial Basis Function (RBF)",
+  "model_name": "Gradient Boosting Classifier",
+  "kernel": "N/A",
   "hyperparameters": {
-    "C": 2.0,
-    "kernel": "rbf",
-    "gamma": "scale",
-    "class_weight": "balanced",
-    "calibration": "CalibratedClassifierCV (5-Fold)"
+    "n_estimators": 120,
+    "learning_rate": 0.08,
+    "max_depth": 3,
+    "loss": "log_loss"
   },
   "classes": [
     "Benign",
     "Malignant"
   ],
-  "accuracy": 0.75,
-  "precision": 0.8125,
+  "accuracy": 0.775,
+  "precision": 0.8667,
   "recall": 0.65,
-  "f1_score": 0.7222,
-  "accuracy_percentage": "75.0%",
-  "precision_percentage": "81.2%",
+  "f1_score": 0.7429,
+  "accuracy_percentage": "77.5%",
+  "precision_percentage": "86.7%",
   "recall_percentage": "65.0%",
-  "f1_score_percentage": "72.2%",
-  "cv_mean_accuracy": 0.7438,
-  "cv_std_accuracy": 0.0538,
+  "f1_score_percentage": "74.3%",
+  "cv_mean_accuracy": 0.7625,
+  "cv_std_accuracy": 0.0545,
   "confusion_matrix": {
     "matrix": [
       [
-        17,
-        3
+        18,
+        2
       ],
       [
         7,
@@ -37,16 +36,323 @@
       "Benign",
       "Malignant"
     ],
-    "true_negatives": 17,
-    "false_positives": 3,
+    "true_negatives": 18,
+    "false_positives": 2,
     "false_negatives": 7,
     "true_positives": 13
   },
+  "best_classifier": "gradient_boosting",
   "dataset_split": {
     "total_samples": 200,
     "train_samples": 160,
     "test_samples": 40,
     "features_extracted": 46
   },
-  "trained_at": "2026-09-27 13:17:34 UTC"
+  "trained_at": "2026-09-28 07:14:45 UTC",
+  "classifiers": {
+    "svm": {
+      "key": "svm",
+      "model_name": "Support Vector Machine (SVM)",
+      "short_name": "SVM (RBF)",
+      "algorithm": "Support Vector Classifier with Radial Basis Function kernel",
+      "hyperparameters": {
+        "C": 2.0,
+        "kernel": "rbf",
+        "gamma": "scale",
+        "class_weight": "balanced",
+        "calibration": "CalibratedClassifierCV (5-Fold)"
+      },
+      "classes": [
+        "Benign",
+        "Malignant"
+      ],
+      "accuracy": 0.75,
+      "precision": 0.8125,
+      "recall": 0.65,
+      "f1_score": 0.7222,
+      "accuracy_percentage": "75.0%",
+      "precision_percentage": "81.2%",
+      "recall_percentage": "65.0%",
+      "f1_score_percentage": "72.2%",
+      "cv_mean_accuracy": 0.7438,
+      "cv_std_accuracy": 0.0538,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            17,
+            3
+          ],
+          [
+            7,
+            13
+          ]
+        ],
+        "labels": [
+          "Benign",
+          "Malignant"
+        ],
+        "true_negatives": 17,
+        "false_positives": 3,
+        "false_negatives": 7,
+        "true_positives": 13
+      },
+      "confusion_matrix_img": "/static/img/confusion_matrix_svm.png",
+      "color": "#0284c7"
+    },
+    "random_forest": {
+      "key": "random_forest",
+      "model_name": "Random Forest Classifier",
+      "short_name": "Random Forest",
+      "algorithm": "Ensemble of 150 bagged decision trees with balanced bootstrapping",
+      "hyperparameters": {
+        "n_estimators": 150,
+        "max_depth": 8,
+        "min_samples_split": 4,
+        "class_weight": "balanced",
+        "criterion": "gini"
+      },
+      "classes": [
+        "Benign",
+        "Malignant"
+      ],
+      "accuracy": 0.75,
+      "precision": 0.8571,
+      "recall": 0.6,
+      "f1_score": 0.7059,
+      "accuracy_percentage": "75.0%",
+      "precision_percentage": "85.7%",
+      "recall_percentage": "60.0%",
+      "f1_score_percentage": "70.6%",
+      "cv_mean_accuracy": 0.725,
+      "cv_std_accuracy": 0.109,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            18,
+            2
+          ],
+          [
+            8,
+            12
+          ]
+        ],
+        "labels": [
+          "Benign",
+          "Malignant"
+        ],
+        "true_negatives": 18,
+        "false_positives": 2,
+        "false_negatives": 8,
+        "true_positives": 12
+      },
+      "confusion_matrix_img": "/static/img/confusion_matrix_random_forest.png",
+      "color": "#10b981"
+    },
+    "gradient_boosting": {
+      "key": "gradient_boosting",
+      "model_name": "Gradient Boosting Classifier",
+      "short_name": "Gradient Boosting",
+      "algorithm": "Sequentially boosted decision trees optimizing pseudo-residuals",
+      "hyperparameters": {
+        "n_estimators": 120,
+        "learning_rate": 0.08,
+        "max_depth": 3,
+        "loss": "log_loss"
+      },
+      "classes": [
+        "Benign",
+        "Malignant"
+      ],
+      "accuracy": 0.775,
+      "precision": 0.8667,
+      "recall": 0.65,
+      "f1_score": 0.7429,
+      "accuracy_percentage": "77.5%",
+      "precision_percentage": "86.7%",
+      "recall_percentage": "65.0%",
+      "f1_score_percentage": "74.3%",
+      "cv_mean_accuracy": 0.7625,
+      "cv_std_accuracy": 0.0545,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            18,
+            2
+          ],
+          [
+            7,
+            13
+          ]
+        ],
+        "labels": [
+          "Benign",
+          "Malignant"
+        ],
+        "true_negatives": 18,
+        "false_positives": 2,
+        "false_negatives": 7,
+        "true_positives": 13
+      },
+      "confusion_matrix_img": "/static/img/confusion_matrix_gradient_boosting.png",
+      "color": "#f59e0b"
+    },
+    "logistic_regression": {
+      "key": "logistic_regression",
+      "model_name": "Logistic Regression",
+      "short_name": "Logistic Regression",
+      "algorithm": "Regularized linear probabilistic binary classifier with balanced weights",
+      "hyperparameters": {
+        "C": 1.0,
+        "penalty": "l2",
+        "solver": "lbfgs",
+        "class_weight": "balanced",
+        "max_iter": 1000
+      },
+      "classes": [
+        "Benign",
+        "Malignant"
+      ],
+      "accuracy": 0.775,
+      "precision": 0.8667,
+      "recall": 0.65,
+      "f1_score": 0.7429,
+      "accuracy_percentage": "77.5%",
+      "precision_percentage": "86.7%",
+      "recall_percentage": "65.0%",
+      "f1_score_percentage": "74.3%",
+      "cv_mean_accuracy": 0.725,
+      "cv_std_accuracy": 0.05,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            18,
+            2
+          ],
+          [
+            7,
+            13
+          ]
+        ],
+        "labels": [
+          "Benign",
+          "Malignant"
+        ],
+        "true_negatives": 18,
+        "false_positives": 2,
+        "false_negatives": 7,
+        "true_positives": 13
+      },
+      "confusion_matrix_img": "/static/img/confusion_matrix_logistic_regression.png",
+      "color": "#6366f1"
+    },
+    "knn": {
+      "key": "knn",
+      "model_name": "K-Nearest Neighbors (KNN)",
+      "short_name": "K-Nearest Neighbors",
+      "algorithm": "Instance-based non-parametric classifier using distance-weighted voting",
+      "hyperparameters": {
+        "n_neighbors": 5,
+        "weights": "distance",
+        "metric": "euclidean"
+      },
+      "classes": [
+        "Benign",
+        "Malignant"
+      ],
+      "accuracy": 0.725,
+      "precision": 0.8,
+      "recall": 0.6,
+      "f1_score": 0.6857,
+      "accuracy_percentage": "72.5%",
+      "precision_percentage": "80.0%",
+      "recall_percentage": "60.0%",
+      "f1_score_percentage": "68.6%",
+      "cv_mean_accuracy": 0.7063,
+      "cv_std_accuracy": 0.0424,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            17,
+            3
+          ],
+          [
+            8,
+            12
+          ]
+        ],
+        "labels": [
+          "Benign",
+          "Malignant"
+        ],
+        "true_negatives": 17,
+        "false_positives": 3,
+        "false_negatives": 8,
+        "true_positives": 12
+      },
+      "confusion_matrix_img": "/static/img/confusion_matrix_knn.png",
+      "color": "#ec4899"
+    }
+  },
+  "comparison_summary": [
+    {
+      "key": "gradient_boosting",
+      "name": "Gradient Boosting Classifier",
+      "short_name": "Gradient Boosting",
+      "accuracy": 0.775,
+      "accuracy_percentage": "77.5%",
+      "precision_percentage": "86.7%",
+      "recall_percentage": "65.0%",
+      "f1_score_percentage": "74.3%",
+      "cv_accuracy": "76.2%",
+      "color": "#f59e0b"
+    },
+    {
+      "key": "logistic_regression",
+      "name": "Logistic Regression",
+      "short_name": "Logistic Regression",
+      "accuracy": 0.775,
+      "accuracy_percentage": "77.5%",
+      "precision_percentage": "86.7%",
+      "recall_percentage": "65.0%",
+      "f1_score_percentage": "74.3%",
+      "cv_accuracy": "72.5%",
+      "color": "#6366f1"
+    },
+    {
+      "key": "svm",
+      "name": "Support Vector Machine (SVM)",
+      "short_name": "SVM (RBF)",
+      "accuracy": 0.75,
+      "accuracy_percentage": "75.0%",
+      "precision_percentage": "81.2%",
+      "recall_percentage": "65.0%",
+      "f1_score_percentage": "72.2%",
+      "cv_accuracy": "74.4%",
+      "color": "#0284c7"
+    },
+    {
+      "key": "random_forest",
+      "name": "Random Forest Classifier",
+      "short_name": "Random Forest",
+      "accuracy": 0.75,
+      "accuracy_percentage": "75.0%",
+      "precision_percentage": "85.7%",
+      "recall_percentage": "60.0%",
+      "f1_score_percentage": "70.6%",
+      "cv_accuracy": "72.5%",
+      "color": "#10b981"
+    },
+    {
+      "key": "knn",
+      "name": "K-Nearest Neighbors (KNN)",
+      "short_name": "K-Nearest Neighbors",
+      "accuracy": 0.725,
+      "accuracy_percentage": "72.5%",
+      "precision_percentage": "80.0%",
+      "recall_percentage": "60.0%",
+      "f1_score_percentage": "68.6%",
+      "cv_accuracy": "70.6%",
+      "color": "#ec4899"
+    }
+  ]
 }

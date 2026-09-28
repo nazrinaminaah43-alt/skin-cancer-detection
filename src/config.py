@@ -34,6 +34,14 @@ class Config:
     SCALER_PATH = str(MODELS_DIR / "scaler.joblib")
     METRICS_PATH = str(MODELS_DIR / "metrics.json")
     CONFUSION_MATRIX_IMG = str(MODELS_DIR / "confusion_matrix.png")
+
+    MODEL_PATHS = {
+        "svm": str(MODELS_DIR / "skin_cancer_svm.joblib"),
+        "random_forest": str(MODELS_DIR / "skin_cancer_rf.joblib"),
+        "gradient_boosting": str(MODELS_DIR / "skin_cancer_gb.joblib"),
+        "logistic_regression": str(MODELS_DIR / "skin_cancer_lr.joblib"),
+        "knn": str(MODELS_DIR / "skin_cancer_knn.joblib"),
+    }
     
     # Database Configuration (SQLite local, adaptable to PostgreSQL/MySQL via env var)
     db_url = os.environ.get("DATABASE_URL")

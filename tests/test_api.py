@@ -53,6 +53,29 @@ class TestApiEndpoints(unittest.TestCase):
         self.assertIn("accuracy", data["model_info"])
         self.assertIn("confusion_matrix", data["model_info"])
 
+    def test_classifiers_endpoint(self):
+        """Should return list of all 5 available classifiers with their test accuracies."""
+        resp = self.client.get("/api/classifiers")
+        self.assertEqual(resp.status_code, 200)
+        data = resp.get_json()
+        self.assertTrue(data["success"])
+        self.assertIn("classifiers", data)
+        self.assertEqual(len(data["classifiers"]), 5)
+        keys = [c["key"] for c in data["classifiers"]]
+        for expected in ["svm", "random_forest", "gradient_boosting", "logistic_regression", "knn"]:
+            self.assertIn(expected, keys)
+
+    def test_model_info_specific_classifier(self):
+        """Should return metrics for a specific requested classifier."""
+        for c_key in ["svm", "random_forest", "gradient_boosting", "logistic_regression", "knn"]:
+            resp = self.client.get(f"/api/model-info?classifier={c_key}")
+            self.assertEqual(resp.status_code, 200)
+            data = resp.get_json()
+            self.assertTrue(data["success"])
+            self.assertEqual(data["model_info"]["key"], c_key)
+            self.assertIn("accuracy_percentage", data["model_info"])
+            self.assertIn("f1_score_percentage", data["model_info"])
+
     def test_samples_endpoint(self):
         """Should return sample images."""
         resp = self.client.get("/api/samples")
@@ -79,6 +102,22 @@ class TestApiEndpoints(unittest.TestCase):
         self.assertIn("confidence", data)
         self.assertIn("feature_summary", data)
         self.assertIn("record_id", data)
+
+    def test_predict_with_different_classifiers(self):
+        """Should support selecting any of the 5 classifiers for prediction."""
+        for c_key in ["svm", "random_forest", "gradient_boosting", "logistic_regression", "knn"]:
+            resp = self.client.post("/api/predict", data={
+                "sample_id": "sample_benign_nevus_1.jpg",
+                "classifier": c_key
+            })
+            self.assertEqual(resp.status_code, 200)
+            data = resp.get_json()
+            self.assertTrue(data["success"])
+            self.assertEqual(data["classifier_key"], c_key)
+            self.assertIn("model_used", data)
+            self.assertIn("model_accuracy", data)
+            self.assertIn("classifiers_comparison", data)
+            self.assertEqual(len(data["classifiers_comparison"]), 5)
 
     def test_predict_with_file_upload(self):
         """Should accept file upload and return prediction + log to DB."""

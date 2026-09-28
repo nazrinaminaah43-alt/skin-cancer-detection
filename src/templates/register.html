@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Clinician Account - SKIN CANCER DETECTION</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="auth-body">
+    <div class="auth-page">
+        <!-- Floating Subtle Background Shapes -->
+        <div class="auth-bg-blob auth-blob-1"></div>
+        <div class="auth-bg-blob auth-blob-2"></div>
+
+        <div class="auth-card auth-card-wide">
+            <!-- Brand / Header -->
+            <div class="auth-header">
+                <div class="auth-brand-logo">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <circle cx="12" cy="11" r="3"/>
+                        <path d="M12 8v1"/>
+                        <path d="M12 13v1"/>
+                    </svg>
+                </div>
+                <h1 class="auth-title">Create Clinical / Research Account</h1>
+                <p class="auth-subtitle">Join the AI-Assisted Dermoscopy Screening Platform</p>
+            </div>
+
+            <!-- Alerts -->
+            {% if error %}
+            <div class="auth-alert alert-error" role="alert">
+                <span class="alert-icon">⚠️</span>
+                <span>{{ error }}</span>
+            </div>
+            {% endif %}
+
+            <!-- Registration Form -->
+            <form action="{{ url_for('api.auth_register') }}" method="POST" class="auth-form" id="registerForm">
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label for="full_name" class="form-label">Full Name & Credentials</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">👤</span>
+                            <input type="text" id="full_name" name="full_name" class="form-input" placeholder="e.g. Dr. Jane Doe, MD" required autofocus>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username" class="form-label">Username</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🏷️</span>
+                            <input type="text" id="username" name="username" class="form-input" placeholder="e.g. jdoe_derm" required autocomplete="username">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Professional / Institutional Email</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">✉️</span>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="e.g. jdoe@hospital.org" required autocomplete="email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role" class="form-label">Clinical / Academic Specialization</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🩺</span>
+                            <select id="role" name="role" class="form-input form-select" required>
+                                <option value="Dermatologist">Dermatologist / Dermato-Oncologist</option>
+                                <option value="Biomedical ML Researcher" selected>Biomedical ML Researcher</option>
+                                <option value="General Practitioner / Resident">General Practitioner / Resident</option>
+                                <option value="Pathology Resident">Pathology / Histopathology Specialist</option>
+                                <option value="Medical Student / Academic">Medical Student / Academic</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password (min 6 characters)</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Create a secure password" minlength="6" required autocomplete="new-password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm_password" class="form-label">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input type="password" id="confirm_password" name="confirm_password" class="form-input" placeholder="Re-enter password" minlength="6" required autocomplete="new-password">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-label">
+                        <input type="checkbox" required checked>
+                        <span>I acknowledge this tool is for clinical screening research and academic decision support.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-auth-submit" id="regSubmitBtn">
+                    <span id="regBtnText">Complete Registration & Enter Dashboard</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </form>
+
+            <!-- Footer Links -->
+            <div class="auth-footer">
+                <p class="auth-footer-text">
+                    Already have an account? 
+                    <a href="{{ url_for('api.login_page') }}" class="auth-link">Sign in here</a>
+                </p>
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+                <p class="auth-guest-option">
+                    <a href="{{ url_for('api.index', guest='1') }}" class="auth-guest-link">
+                        <span>Continue in Guest / Preview Mode</span> →
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

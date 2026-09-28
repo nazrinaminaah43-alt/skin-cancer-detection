@@ -934,6 +934,229 @@ body {
 }
 
 /* ==========================================================================
+   Multi-Classifier Components Styling
+   ========================================================================== */
+
+/* 1. Classifier Selector Box in Input Panel */
+.classifier-selector-box {
+    margin-bottom: 1.25rem;
+    padding: 0.9rem 1rem;
+    background: var(--bg-surface-alt);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.classifier-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.classifier-label-row label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.classifier-dropdown {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: var(--bg-surface);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.classifier-dropdown:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.classifier-hint {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    margin-top: 0.4rem;
+}
+
+/* 2. Multi-Classifier Real-time Comparison Table in Result Card */
+.multi-classifier-box {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    animation: fadeIn 0.3s ease;
+}
+
+.multi-classifier-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.35rem;
+}
+
+.multi-classifier-desc {
+    font-size: 0.76rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    text-align: left;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.comparison-table th {
+    background: var(--bg-surface-alt);
+    padding: 0.6rem 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-secondary);
+    border-bottom: 1.5px solid var(--border-color);
+}
+
+.comparison-table td {
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+    background-color: var(--bg-surface-alt);
+}
+
+.comparison-table tr.row-active-classifier {
+    background-color: #f0f9ff;
+    font-weight: 600;
+    border-left: 3px solid #0284c7;
+}
+
+.active-pill {
+    display: inline-block;
+    background: #0284c7;
+    color: #ffffff;
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: var(--radius-full);
+    margin-left: 0.35rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.metric-pill {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.metric-pill.accuracy-pill {
+    background: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+}
+
+.metric-pill.f1-pill {
+    background: #f3e8ff;
+    color: #6b21a8;
+    border: 1px solid #e9d5ff;
+}
+
+.badge-accent {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+    font-size: 0.72rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+}
+
+/* 3. Classifier Tabs in Model Performance Card */
+.classifier-tabs-container {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.classifier-tabs-label {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.classifier-tabs-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.classifier-tab-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-surface-alt);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.classifier-tab-btn:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: var(--bg-surface);
+}
+
+.classifier-tab-btn.active {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+    box-shadow: 0 1px 3px rgba(2, 132, 199, 0.3);
+}
+
+.cm-comparison-wrapper {
+    text-align: center;
+    background: var(--bg-surface-alt);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.cm-comparison-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 280px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
    Prediction History Section
    ========================================================================== */
 .history-section {
@@ -1094,3 +1317,1248 @@ body {
         opacity: 1;
     }
 }
+
+/* ==========================================================================
+   User Profile & Authentication Navbar
+   ========================================================================== */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.35rem 0.65rem;
+    background: var(--bg-surface-alt);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.user-meta {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.user-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.user-role {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.btn-logout {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.65rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+    margin-left: 0.35rem;
+}
+
+.btn-logout:hover {
+    color: var(--malignant-color);
+    border-color: var(--malignant-border);
+    background: var(--malignant-bg);
+}
+
+.btn-login-nav {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--primary);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-login-nav:hover {
+    background: var(--primary-hover);
+}
+
+.btn-logout-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-surface-alt);
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-logout-nav:hover {
+    color: var(--malignant-color);
+    background: var(--malignant-bg);
+    border-color: var(--malignant-border);
+}
+
+.badge-guest {
+    background: var(--warning-bg);
+    color: var(--warning-color);
+    border: 1px solid var(--warning-border);
+    font-size: 0.72rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Dedicated Authentication Pages (Login & Register)
+   ========================================================================== */
+
+.auth-body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 40%, #e0f2fe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.auth-page {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.auth-card-wide.auth-card {
+    max-width: 600px;
+}
+
+.auth-bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.auth-blob-1 {
+    width: 320px;
+    height: 320px;
+    background: #38bdf8;
+    top: -50px;
+    left: -80px;
+}
+
+.auth-blob-2 {
+    width: 360px;
+    height: 360px;
+    background: #34d399;
+    bottom: -60px;
+    right: -80px;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    padding: 2.25rem 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.auth-brand-logo {
+    width: 58px;
+    height: 58px;
+    background: linear-gradient(135deg, var(--primary) 0%, #0369a1 100%);
+    color: #ffffff;
+    border-radius: var(--radius-md);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.85rem;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+}
+
+.auth-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+}
+
+.auth-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.auth-badges {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.auth-alert {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+}
+
+.auth-alert.alert-info {
+    background: var(--primary-light);
+    color: var(--primary-hover);
+    border: 1px solid #bae6fd;
+}
+
+.auth-alert.alert-error {
+    background: var(--malignant-bg);
+    color: var(--malignant-color);
+    border: 1px solid var(--malignant-border);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 640px) {
+    .form-row-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    font-size: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.7rem 0.85rem 0.7rem 2.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 0.88rem;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.form-input.input-highlight {
+    border-color: #059669;
+    background-color: #ecfdf5;
+    transition: background-color 0.4s ease;
+}
+
+.form-select {
+    padding-left: 2.6rem;
+    cursor: pointer;
+}
+
+.btn-toggle-pwd {
+    position: absolute;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+}
+
+.btn-toggle-pwd:hover {
+    color: var(--text-primary);
+}
+
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.82rem;
+}
+
+.remember-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.btn-auth-submit {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--primary) 0%, #0369a1 100%);
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
+}
+
+.btn-auth-submit:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(2, 132, 199, 0.35);
+}
+
+/* 1-Click Quick Demo Login */
+.demo-login-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: var(--radius-md);
+}
+
+.demo-box-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.demo-box-icon {
+    font-size: 1rem;
+}
+
+.demo-box-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.demo-box-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.demo-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+}
+
+@media (max-width: 440px) {
+    .demo-buttons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.55rem 0.75rem;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.btn-demo:hover {
+    border-color: var(--primary);
+    background: var(--primary-light);
+    transform: translateY(-1px);
+}
+
+.demo-btn-role {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.demo-btn-name {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Auth Footer */
+.auth-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.auth-footer-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.auth-link {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    margin: 0.85rem 0;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.auth-divider span {
+    padding: 0 0.6rem;
+}
+
+.auth-guest-option {
+    font-size: 0.82rem;
+}
+
+.auth-guest-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.auth-guest-link:hover {
+    color: var(--primary);
+}
+
+.auth-disclaimer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+}
+
+/* ==========================================================================
+   Modern Healthcare Medical Login Page Theme
+   White & Light Blue Palette, Teal Accents, Professional Clinical Aesthetics
+   ========================================================================== */
+
+.medical-login-body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fbfe;
+    background-image: 
+        radial-gradient(at 15% 15%, rgba(224, 242, 254, 0.6) 0px, transparent 50%),
+        radial-gradient(at 85% 85%, rgba(204, 251, 241, 0.45) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(240, 249, 255, 0.5) 0px, transparent 50%);
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+/* Subtle Ambient Healthcare Glows & Crosses */
+.med-bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.glow-top-left {
+    width: 450px;
+    height: 450px;
+    background: rgba(56, 189, 248, 0.22);
+    top: -120px;
+    left: -120px;
+}
+
+.glow-bottom-right {
+    width: 480px;
+    height: 480px;
+    background: rgba(20, 184, 166, 0.18);
+    bottom: -140px;
+    right: -120px;
+}
+
+.med-bg-cross {
+    position: absolute;
+    color: rgba(2, 132, 199, 0.05);
+    font-size: 5rem;
+    font-weight: 300;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cross-1 { top: 8%; right: 12%; font-size: 6rem; transform: rotate(15deg); }
+.cross-2 { bottom: 10%; left: 8%; font-size: 4.5rem; transform: rotate(-10deg); }
+.cross-3 { top: 40%; left: 4%; font-size: 3.5rem; opacity: 0.6; }
+
+/* Main Login Container Layout */
+.medical-login-wrapper {
+    width: 100%;
+    max-width: 1120px;
+    padding: 2rem 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.medical-login-container {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 28px;
+    box-shadow: 
+        0 25px 50px -12px rgba(2, 132, 199, 0.09),
+        0 0 0 1px rgba(2, 132, 199, 0.03),
+        0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    display: flex;
+    overflow: hidden;
+    min-height: 640px;
+}
+
+/* ==========================================================================
+   Left Panel: Medical Illustration & Trust Proof
+   ========================================================================== */
+
+.med-left-panel {
+    flex: 1.15;
+    background: linear-gradient(155deg, #f0f7ff 0%, #e6f4fe 60%, #e0f2fe 100%);
+    border-right: 1px solid #e2e8f0;
+    padding: 2.75rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.med-left-panel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    background: linear-gradient(to right, transparent, rgba(224, 242, 254, 0.3));
+    pointer-events: none;
+}
+
+.med-left-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+/* Brand badge on top left */
+.med-brand-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.med-cross-badge {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+    color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.28);
+}
+
+.med-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.med-brand-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #0369a1;
+}
+
+.med-brand-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #0d9488;
+}
+
+/* Doctor Illustration with Floating Badges */
+.med-illustration-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.med-illustration-frame {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    border-radius: 20px;
+    overflow: visible;
+}
+
+.med-doctor-img {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    object-fit: contain;
+    border-radius: 18px;
+    box-shadow: 0 16px 36px -10px rgba(2, 132, 199, 0.16);
+    background: #ffffff;
+    transition: transform 0.4s ease;
+}
+
+.med-doctor-img:hover {
+    transform: scale(1.015);
+}
+
+/* Floating Badges */
+.floating-badge {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    padding: 0.65rem 0.9rem;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    box-shadow: 0 10px 22px -5px rgba(2, 132, 199, 0.15);
+    animation: floatBadge 4s ease-in-out infinite;
+}
+
+.badge-top-right {
+    top: 12px;
+    right: -12px;
+    animation-delay: 0s;
+}
+
+.badge-bottom-left {
+    bottom: 12px;
+    left: -12px;
+    animation-delay: 2s;
+}
+
+@keyframes floatBadge {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+}
+
+.badge-icon-wrap {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-pulse {
+    background: #e0f2fe;
+}
+
+.icon-shield {
+    background: #ccfbf1;
+}
+
+.badge-text-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.badge-sub {
+    font-size: 0.68rem;
+    color: #64748b;
+}
+
+/* Trust Quote on Bottom */
+.med-trust-quote {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 14px;
+    padding: 1rem 1.15rem;
+    margin-top: 1.25rem;
+}
+
+.trust-stars {
+    color: #f59e0b;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.35rem;
+}
+
+.trust-text {
+    font-size: 0.82rem;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.45;
+    margin-bottom: 0.5rem;
+}
+
+.trust-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.trust-author {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0284c7;
+}
+
+.trust-stats {
+    font-size: 0.7rem;
+    color: #64748b;
+}
+
+/* ==========================================================================
+   Right Panel: Clean Rounded Login Card
+   ========================================================================== */
+
+.med-right-panel {
+    flex: 1;
+    background: #ffffff;
+    padding: 2.75rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.med-login-card {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Card Header with Medical Cross Icon */
+.med-card-header {
+    text-align: left;
+    margin-bottom: 1.75rem;
+}
+
+.medical-logo-circle {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, #e0f2fe 0%, #ecfdf5 100%);
+    border: 1.5px solid #bae6fd;
+    border-radius: 14px;
+    color: #0284c7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.15rem;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12);
+    transition: transform 0.3s ease, border-color 0.3s;
+}
+
+.medical-logo-circle:hover {
+    transform: rotate(5deg) scale(1.05);
+    border-color: #0d9488;
+    color: #0d9488;
+}
+
+.welcome-heading {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.35rem;
+}
+
+.welcome-subtitle {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.45;
+}
+
+/* Alerts */
+.med-alert {
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-size: 0.84rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.35rem;
+    animation: fadeInAlert 0.3s ease;
+}
+
+.alert-success-soft {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+}
+
+.alert-danger-soft {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+.med-alert-icon {
+    font-size: 1rem;
+}
+
+@keyframes fadeInAlert {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form Styles */
+.med-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.med-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.med-label {
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.med-input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.med-input-icon {
+    position: absolute;
+    left: 1rem;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    transition: color 0.2s ease;
+}
+
+.med-input {
+    width: 100%;
+    padding: 0.82rem 1rem 0.82rem 2.85rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #0f172a;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.med-input::placeholder {
+    color: #94a3b8;
+}
+
+.med-input:focus {
+    outline: none;
+    background: #ffffff;
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3.5px rgba(2, 132, 199, 0.14);
+}
+
+.med-input:focus + .med-input-icon,
+.med-input-box:focus-within .med-input-icon {
+    color: #0284c7;
+}
+
+.med-input.input-pulse {
+    border-color: #0d9488;
+    background-color: #f0fdfa;
+}
+
+.med-toggle-pwd {
+    position: absolute;
+    right: 0.85rem;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    transition: color 0.2s;
+}
+
+.med-toggle-pwd:hover {
+    color: #0f172a;
+}
+
+/* Remember Me & Forgot Password Row */
+.med-form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.84rem;
+    margin-top: -0.2rem;
+}
+
+.med-checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: #475569;
+    user-select: none;
+}
+
+.med-custom-checkbox {
+    width: 16px;
+    height: 16px;
+    accent-color: #0284c7;
+    cursor: pointer;
+}
+
+.med-forgot-link {
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.med-forgot-link:hover {
+    color: #0369a1;
+    text-decoration: underline;
+}
+
+/* Prominent Blue Login Button with Rounded Corners */
+.btn-medical-primary {
+    width: 100%;
+    padding: 0.88rem 1.5rem;
+    margin-top: 0.35rem;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-medical-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    transform: translateY(-1.5px);
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.42);
+}
+
+.btn-medical-primary:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.btn-medical-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-medical-primary .btn-icon {
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.btn-medical-primary:hover:not(:disabled) .btn-icon {
+    transform: translateX(3px);
+}
+
+/* Sign Up Link */
+.med-card-footer {
+    text-align: center;
+    margin-top: 1.35rem;
+}
+
+.signup-prompt {
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+.signup-link {
+    color: #0284c7;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 0.25rem;
+    transition: color 0.2s;
+}
+
+.signup-link:hover {
+    color: #0369a1;
+    text-decoration: underline;
+}
+
+/* 1-Click Quick Demo Accounts Section */
+.med-demo-panel {
+    margin-top: 1.5rem;
+    padding: 0.9rem;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 14px;
+}
+
+.demo-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.65rem;
+    text-align: center;
+}
+
+.demo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem;
+}
+
+.btn-demo-pill {
+    padding: 0.5rem 0.65rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.btn-demo-pill:hover {
+    border-color: #0284c7;
+    background: #f0f9ff;
+    transform: translateY(-1px);
+}
+
+.pill-badge-doc {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #0284c7;
+}
+
+.pill-badge-res {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #0d9488;
+}
+
+.pill-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* Guest Preview Row */
+.guest-preview-row {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.guest-preview-link {
+    font-size: 0.8rem;
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.guest-preview-link:hover {
+    color: #0284c7;
+}
+
+.guest-arrow {
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   Responsive Adaptations for Tablets and Mobile
+   ========================================================================== */
+
+@media (max-width: 960px) {
+    .medical-login-container {
+        flex-direction: column;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+
+    .med-left-panel {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 2rem 1.75rem;
+    }
+
+    .med-illustration-frame {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .floating-badge {
+        display: none; /* Hide floating cards on smaller screens for clean layout */
+    }
+
+    .med-trust-quote {
+        display: none;
+    }
+
+    .med-right-panel {
+        padding: 2.25rem 2rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .medical-login-wrapper {
+        padding: 1rem 0.75rem;
+    }
+
+    .medical-login-container {
+        border-radius: 20px;
+    }
+
+    .med-left-panel {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .med-right-panel {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .welcome-heading {
+        font-size: 1.5rem;
+    }
+
+    .demo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

@@ -254,7 +254,16 @@ document.addEventListener("DOMContentLoaded", () => {
             formData.append("sample_id", selectedSampleId);
         }
 
+        // Pass selected classifier from dropdown
+        if (classifierSelect && classifierSelect.value) {
+            formData.append("classifier", classifierSelect.value);
+        }
+
         try {
+            const activeClassifierLabel = classifierSelect && classifierSelect.options[classifierSelect.selectedIndex] 
+                ? classifierSelect.options[classifierSelect.selectedIndex].text.split("(")[0].trim()
+                : "Classifier";
+
             // Simulated visual step updates for clinical responsiveness
             setTimeout(() => {
                 if (statusMessage) statusMessage.textContent = "OpenCV: DullRazor hair removal & CLAHE contrast...";
@@ -263,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (statusMessage) statusMessage.textContent = "OpenCV: Otsu lesion contour segmentation...";
             }, 600);
             setTimeout(() => {
-                if (statusMessage) statusMessage.textContent = "Extracting ABCD features & SVM RBF inference...";
+                if (statusMessage) statusMessage.textContent = `Extracting ABCD features & ${activeClassifierLabel} inference...`;
             }, 900);
 
             const response = await fetch(`${API_BASE_URL}/api/predict`, {
@@ -334,7 +343,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Prediction & Model
         resPrediction.textContent = data.prediction;
-        resModel.textContent = `${data.model_used}`;
+        const accuracySuffix = data.model_accuracy ? ` (Acc: ${data.model_accuracy})` : "";
+        resModel.textContent = `${data.model_used}${accuracySuffix}`;
         resConfidence.textContent = `${data.confidence_percentage}`;
 
         // Badge styling
@@ -367,6 +377,40 @@ document.addEventListener("DOMContentLoaded", () => {
             featSharpness.textContent = data.feature_summary.texture_sharpness !== undefined ? data.feature_summary.texture_sharpness : "—";
         }
 
+        // Multi-Classifier Detection & Accuracy Comparison Table
+        const multiClassifierBox = document.getElementById("multiClassifierBox");
+        const multiClassifierTbody = document.getElementById("multiClassifierTbody");
+        if (multiClassifierBox && multiClassifierTbody && Array.isArray(data.classifiers_comparison) && data.classifiers_comparison.length > 0) {
+            multiClassifierTbody.innerHTML = "";
+            data.classifiers_comparison.forEach(c => {
+                const tr = document.createElement("tr");
+                if (c.is_active) {
+                    tr.className = "row-active-classifier";
+                }
+                const isBen = c.prediction.toUpperCase() === "BENIGN";
+                const predBadgeClass = isBen ? "status-benign" : "status-malignant";
+                const cancerText = c.is_cancer ? "⚠️ Cancer Detected" : "🛡️ Non-Cancerous";
+                const activeTag = c.is_active ? ` <span class="active-pill">Selected</span>` : "";
+
+                tr.innerHTML = `
+                    <td>
+                        <strong style="color: ${c.color || 'inherit'}">${c.name}</strong>${activeTag}
+                    </td>
+                    <td>
+                        <span class="status-pill ${predBadgeClass}">${c.prediction}</span>
+                    </td>
+                    <td style="font-weight: 600; color: ${c.is_cancer ? 'var(--malignant-color)' : 'var(--benign-color)'}">
+                        ${cancerText}
+                    </td>
+                    <td><strong>${c.confidence_percentage}</strong></td>
+                    <td><span class="metric-pill accuracy-pill">${c.test_accuracy}</span></td>
+                    <td><span class="metric-pill f1-pill">${c.f1_score}</span></td>
+                `;
+                multiClassifierTbody.appendChild(tr);
+            });
+            multiClassifierBox.style.display = "block";
+        }
+
         // Enable OpenCV segmented contour overlay toggle
         if (data.image_info && data.image_info.segmented_url) {
             currentOverlayUrl = data.image_info.segmented_url.startsWith("http")
@@ -387,21 +431,81 @@ document.addEventListener("DOMContentLoaded", () => {
         if (resSkinVerified) resSkinVerified.textContent = "—";
         resPrediction.textContent = "—";
         resPrediction.style.color = "var(--text-primary)";
-        resModel.textContent = "SVM (RBF Kernel)";
+        resModel.textContent = "Gradient Boosting (Acc: 77.5%)";
         resConfidence.textContent = "—";
         resConfidence.style.color = "var(--text-primary)";
         resultBadge.textContent = "Awaiting Input";
         resultBadge.className = "status-pill status-ready";
         confidenceBarWrapper.style.display = "none";
         featuresSummaryBox.style.display = "none";
+
+        const multiClassifierBox = document.getElementById("multiClassifierBox");
+        const multiClassifierTbody = document.getElementById("multiClassifierTbody");
+        if (multiClassifierBox) multiClassifierBox.style.display = "none";
+        if (multiClassifierTbody) multiClassifierTbody.innerHTML = "";
     }
 
     // ==========================================================================
-    // 4. Model Performance: Dynamically Loaded from Backend
+    // 4. Model Performance: Multi-Classifier Metrics & Comparison View
     // ==========================================================================
-    async function loadModelPerformance() {
+    let currentActiveClassifier = "gradient_boosting";
+    const btnShowComparisonChart = document.getElementById("btnShowComparisonChart");
+    const cmComparisonWrapper = document.getElementById("cmComparisonWrapper");
+    const cmHeaderTitle = document.getElementById("cmHeaderTitle");
+    const perfSubtext = document.getElementById("perfSubtext");
+    const classifierTabsList = document.getElementById("classifierTabsList");
+    const classifierSelect = document.getElementById("classifierSelect");
+    const activeModelAccuracyBadge = document.getElementById("activeModelAccuracyBadge");
+
+    if (classifierSelect) {
+        classifierSelect.addEventListener("change", () => {
+            const selectedKey = classifierSelect.value;
+            currentActiveClassifier = selectedKey;
+            loadModelPerformance(selectedKey);
+
+            // Update badge text based on selected option
+            const selectedOption = classifierSelect.options[classifierSelect.selectedIndex];
+            if (selectedOption && activeModelAccuracyBadge) {
+                const match = selectedOption.text.match(/Acc:\s*([\d\.]+%)/i);
+                if (match) {
+                    activeModelAccuracyBadge.textContent = `Acc: ${match[1]}`;
+                }
+            }
+        });
+    }
+
+    // Attach click listeners to performance classifier tabs
+    if (classifierTabsList) {
+        classifierTabsList.addEventListener("click", (e) => {
+            const tabBtn = e.target.closest(".classifier-tab-btn");
+            if (!tabBtn) return;
+
+            const cKey = tabBtn.dataset.classifier;
+            if (cKey) {
+                currentActiveClassifier = cKey;
+                loadModelPerformance(cKey);
+
+                // Sync with dropdown if present
+                if (classifierSelect && classifierSelect.value !== cKey) {
+                    classifierSelect.value = cKey;
+                    const opt = classifierSelect.options[classifierSelect.selectedIndex];
+                    if (opt && activeModelAccuracyBadge) {
+                        const match = opt.text.match(/Acc:\s*([\d\.]+%)/i);
+                        if (match) activeModelAccuracyBadge.textContent = `Acc: ${match[1]}`;
+                    }
+                }
+            }
+        });
+    }
+
+    async function loadModelPerformance(classifierKey = null) {
         try {
-            const resp = await fetch(`${API_BASE_URL}/api/model-info`);
+            const targetKey = classifierKey || currentActiveClassifier;
+            const queryUrl = targetKey 
+                ? `${API_BASE_URL}/api/model-info?classifier=${encodeURIComponent(targetKey)}`
+                : `${API_BASE_URL}/api/model-info`;
+
+            const resp = await fetch(queryUrl);
             const data = await resp.json();
 
             if (!resp.ok || !data.success) {
@@ -410,13 +514,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const metrics = data.model_info;
 
-            // Populate Performance Numbers dynamically (no hardcoded values!)
+            // Highlight the active tab
+            document.querySelectorAll(".classifier-tab-btn").forEach(btn => {
+                btn.classList.toggle("active", btn.dataset.classifier === (metrics.key || targetKey));
+            });
+
+            // Update Subtext & Headers
+            if (perfSubtext) {
+                const modelName = metrics.model_name || targetKey;
+                perfSubtext.innerHTML = `Verified held-out test split evaluation for <strong>${modelName}</strong>:`;
+            }
+            if (cmHeaderTitle) {
+                cmHeaderTitle.textContent = `Confusion Matrix (${metrics.short_name || metrics.model_name || "Active Model"})`;
+            }
+
+            // Populate Performance Numbers dynamically
             metricAccuracy.textContent = metrics.accuracy_percentage || `${(metrics.accuracy * 100).toFixed(1)}%`;
             metricPrecision.textContent = metrics.precision_percentage || `${(metrics.precision * 100).toFixed(1)}%`;
             metricRecall.textContent = metrics.recall_percentage || `${(metrics.recall * 100).toFixed(1)}%`;
             metricF1.textContent = metrics.f1_score_percentage || `${(metrics.f1_score * 100).toFixed(1)}%`;
 
-            // Populate Confusion Matrix
+            // Populate Confusion Matrix Grid
             if (metrics.confusion_matrix) {
                 cmTN.textContent = metrics.confusion_matrix.true_negatives;
                 cmFP.textContent = metrics.confusion_matrix.false_positives;
@@ -424,9 +542,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 cmTP.textContent = metrics.confusion_matrix.true_positives;
             }
 
-            // Refresh heatmap image with timestamp cache buster
+            // Refresh individual heatmap image
             if (cmHeatmapImg) {
-                cmHeatmapImg.src = `${API_BASE_URL}/static/img/confusion_matrix.png?t=${Date.now()}`;
+                const imgKey = metrics.key || targetKey || "svm";
+                cmHeatmapImg.src = `${API_BASE_URL}/static/img/confusion_matrix_${imgKey}.png?t=${Date.now()}`;
             }
 
         } catch (err) {
@@ -438,20 +557,42 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Toggle Matrix Grid vs Seaborn Plot
+    // Toggle Matrix Grid vs Seaborn Plot vs Multi-Model Comparison Chart
     btnShowMatrixGrid.addEventListener("click", () => {
         btnShowMatrixGrid.classList.add("active");
         btnShowHeatmap.classList.remove("active");
+        if (btnShowComparisonChart) btnShowComparisonChart.classList.remove("active");
+
         cmGridWrapper.style.display = "block";
         cmHeatmapWrapper.style.display = "none";
+        if (cmComparisonWrapper) cmComparisonWrapper.style.display = "none";
     });
 
     btnShowHeatmap.addEventListener("click", () => {
         btnShowHeatmap.classList.add("active");
         btnShowMatrixGrid.classList.remove("active");
+        if (btnShowComparisonChart) btnShowComparisonChart.classList.remove("active");
+
         cmGridWrapper.style.display = "none";
         cmHeatmapWrapper.style.display = "block";
+        if (cmComparisonWrapper) cmComparisonWrapper.style.display = "none";
     });
+
+    if (btnShowComparisonChart) {
+        btnShowComparisonChart.addEventListener("click", () => {
+            btnShowComparisonChart.classList.add("active");
+            btnShowMatrixGrid.classList.remove("active");
+            btnShowHeatmap.classList.remove("active");
+
+            cmGridWrapper.style.display = "none";
+            cmHeatmapWrapper.style.display = "none";
+            if (cmComparisonWrapper) {
+                cmComparisonWrapper.style.display = "block";
+                const compImg = document.getElementById("compChartImg");
+                if (compImg) compImg.src = `${API_BASE_URL}/static/img/models_comparison_chart.png?t=${Date.now()}`;
+            }
+        });
+    }
 
     // ==========================================================================
     // 5. Curated Samples: 1-Click Testing Support

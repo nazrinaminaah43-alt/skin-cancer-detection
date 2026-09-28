@@ -28,10 +28,32 @@
                     <p class="brand-subtitle">AI & OpenCV Computer Vision Screening Dashboard</p>
                 </div>
             </div>
-            <div class="header-badges">
-                <span class="badge badge-tech"><span class="status-dot"></span> SVM (RBF Kernel)</span>
-                <span class="badge badge-tech">OpenCV 4.x</span>
-                <span class="badge badge-tech">REST API</span>
+            <div class="header-right">
+                <div class="header-badges">
+                    <span class="badge badge-tech"><span class="status-dot"></span> SVM (RBF Kernel)</span>
+                    <span class="badge badge-tech">OpenCV 4.x</span>
+                </div>
+                {% if user %}
+                <div class="auth-nav-action">
+                    <a href="{{ url_for('api.logout') }}" class="btn-logout-nav" title="Sign Out">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                        <span>Sign Out</span>
+                    </a>
+                </div>
+                {% elif is_guest %}
+                <div class="user-profile-menu guest-mode-nav">
+                    <span class="badge badge-guest">Guest Preview</span>
+                    <a href="{{ url_for('api.login_page') }}" class="btn-login-nav">Sign In</a>
+                </div>
+                {% else %}
+                <div class="user-profile-menu">
+                    <a href="{{ url_for('api.login_page') }}" class="btn-login-nav">Sign In</a>
+                </div>
+                {% endif %}
             </div>
         </div>
     </header>
@@ -93,6 +115,25 @@
                                 ✕ Clear
                             </button>
                         </div>
+                    </div>
+                </div>
+
+                <!-- ML Classifier Selector -->
+                <div class="classifier-selector-box">
+                    <div class="classifier-label-row">
+                        <label for="classifierSelect" class="classifier-label">
+                            <span class="icon">⚙️</span> <strong>Select ML Classifier:</strong>
+                        </label>
+                        <span class="badge badge-accent" id="activeModelAccuracyBadge">Acc: 77.5%</span>
+                    </div>
+                    <div class="classifier-select-wrap">
+                        <select id="classifierSelect" class="form-input form-select classifier-dropdown" aria-label="Select ML Model">
+                            <option value="gradient_boosting" selected>Gradient Boosting Classifier (Acc: 77.5% • F1: 74.3%) [Top Performer]</option>
+                            <option value="logistic_regression">Logistic Regression (Acc: 77.5% • F1: 74.3%)</option>
+                            <option value="svm">Support Vector Machine - SVM RBF (Acc: 75.0% • F1: 72.2%)</option>
+                            <option value="random_forest">Random Forest Classifier (Acc: 75.0% • F1: 70.6%)</option>
+                            <option value="knn">K-Nearest Neighbors - KNN (Acc: 72.5% • F1: 68.6%)</option>
+                        </select>
                     </div>
                 </div>
 
@@ -219,17 +260,58 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Multi-Classifier Detection & Accuracy Breakdown Table -->
+                    <div class="multi-classifier-box" id="multiClassifierBox" style="display: none;">
+                        <div class="multi-classifier-header">
+                            <h4 class="subheading">
+                                <span class="icon">📊</span> Multi-Classifier Detection & Accuracy Breakdown
+                            </h4>
+                            <span class="badge badge-accent">5 Models Evaluated</span>
+                        </div>
+                        <p class="multi-classifier-desc">Separate real-time detection results and benchmark test accuracies for this lesion:</p>
+                        
+                        <div class="table-responsive">
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>Classifier</th>
+                                        <th>Detection Result</th>
+                                        <th>Cancer Status</th>
+                                        <th>Confidence</th>
+                                        <th>Benchmark Accuracy</th>
+                                        <th>F1-Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="multiClassifierTbody">
+                                    <!-- Populated dynamically via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- MODEL PERFORMANCE CARD (Dynamic, not hardcoded) -->
             <section class="card performance-card" id="performanceCard">
                 <div class="card-header">
-                    <h2><span class="icon">📈</span> MODEL PERFORMANCE</h2>
+                    <h2><span class="icon">📈</span> MODEL PERFORMANCE & BENCHMARKS</h2>
                     <span class="badge badge-success" id="perfSourceBadge">Trained Test Metrics</span>
                 </div>
                 <div class="card-body">
-                    <p class="perf-subtext">Dynamically loaded from trained SVM evaluation on held-out test split:</p>
+                    <!-- Classifier Selector Tabs -->
+                    <div class="classifier-tabs-container">
+                        <span class="classifier-tabs-label"><strong>Inspect Individual Classifier Metrics:</strong></span>
+                        <div class="classifier-tabs-list" id="classifierTabsList">
+                            <button type="button" class="classifier-tab-btn active" data-classifier="gradient_boosting">Gradient Boosting (77.5%)</button>
+                            <button type="button" class="classifier-tab-btn" data-classifier="logistic_regression">Logistic Regression (77.5%)</button>
+                            <button type="button" class="classifier-tab-btn" data-classifier="svm">SVM RBF (75.0%)</button>
+                            <button type="button" class="classifier-tab-btn" data-classifier="random_forest">Random Forest (75.0%)</button>
+                            <button type="button" class="classifier-tab-btn" data-classifier="knn">KNN (72.5%)</button>
+                        </div>
+                    </div>
+
+                    <p class="perf-subtext" id="perfSubtext">Dynamically loaded from verified 20% test split evaluation:</p>
                     
                     <div class="metrics-grid">
                         <div class="metric-box">
@@ -257,10 +339,11 @@
                     <!-- Confusion Matrix Display Section -->
                     <div class="confusion-matrix-section">
                         <div class="cm-header">
-                            <h4 class="subheading">Confusion Matrix</h4>
+                            <h4 class="subheading" id="cmHeaderTitle">Confusion Matrix</h4>
                             <div class="cm-toggles">
                                 <button type="button" class="btn-xs active" id="btnShowMatrixGrid">Matrix Grid</button>
                                 <button type="button" class="btn-xs" id="btnShowHeatmap">Plot View</button>
+                                <button type="button" class="btn-xs" id="btnShowComparisonChart">Accuracy Chart</button>
                             </div>
                         </div>
 
@@ -296,6 +379,11 @@
                         <!-- Seaborn Heatmap Image View -->
                         <div class="cm-heatmap-wrapper" id="cmHeatmapWrapper" style="display: none;">
                             <img src="{{ url_for('static', filename='img/confusion_matrix.png') }}" alt="Confusion Matrix Heatmap" class="cm-heatmap-img" id="cmHeatmapImg">
+                        </div>
+
+                        <!-- Comparative Performance Bar Chart View -->
+                        <div class="cm-heatmap-wrapper" id="cmComparisonWrapper" style="display: none;">
+                            <img src="{{ url_for('static', filename='img/models_comparison_chart.png') }}" alt="Model Comparison Bar Chart" class="cm-heatmap-img" id="compChartImg">
                         </div>
                     </div>
                 </div>

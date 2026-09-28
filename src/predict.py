@@ -153,14 +153,14 @@ class DeepLearningPredictor:
 
         if is_cancer:
             cancer_status = "SKIN CANCER DETECTED"
-            cancer_verdict = "YES — Potential Skin Cancer Detected (Malignant Melanoma)"
+            cancer_verdict = "YES - Potential Skin Cancer Detected (Malignant Melanoma)"
             cancer_explanation = (
                 "The deep learning neural network detected high-order structural features "
                 "consistent with malignant melanoma. Immediate clinical dermoscopic evaluation is recommended."
             )
         else:
             cancer_status = "NOT SKIN CANCER"
-            cancer_verdict = "NO — Not Skin Cancer (Benign Lesion)"
+            cancer_verdict = "NO - Not Skin Cancer (Benign Lesion)"
             cancer_explanation = (
                 "The deep learning neural network detected benign morphological patterns "
                 "characteristic of non-cancerous melanocytic nevi."

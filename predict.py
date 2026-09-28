@@ -12,13 +12,18 @@ from src.predict import predict_image, DeepLearningPredictor
 
 def main():
     parser = argparse.ArgumentParser(description="Skin Cancer Deep Learning Prediction CLI")
-    parser.add_argument("--image", "-i", type=str, required=True, help="Path to lesion image file")
+    parser.add_argument("image_pos", nargs="?", default=None, help="Path to lesion image file (positional)")
+    parser.add_argument("--image", "-i", type=str, default=None, help="Path to lesion image file")
     parser.add_argument("--model", "-m", type=str, default="best", help="Model name: custom_cnn, mobilenet_v2, resnet50, efficientnet_b0, vgg16, or best")
     args = parser.parse_args()
 
-    image_path = Path(args.image)
+    image_target = args.image or args.image_pos
+    if not image_target:
+        parser.error("Please provide an image path either as a positional argument or via --image/-i.")
+
+    image_path = Path(image_target)
     if not image_path.exists():
-        print(f"Error: File '{args.image}' not found.")
+        print(f"Error: File '{image_target}' not found.")
         sys.exit(1)
 
     result = predict_image(str(image_path), model_name=args.model)

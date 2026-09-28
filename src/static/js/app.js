@@ -380,6 +380,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // Multi-Classifier Detection & Accuracy Comparison Table
         const multiClassifierBox = document.getElementById("multiClassifierBox");
         const multiClassifierTbody = document.getElementById("multiClassifierTbody");
+        const consensusBanner = document.getElementById("consensusBanner");
+        const consensusBadge = document.getElementById("consensusBadge");
+        const consensusRatioText = document.getElementById("consensusRatioText");
+        const consensusExplanation = document.getElementById("consensusExplanation");
+
         if (multiClassifierBox && multiClassifierTbody && Array.isArray(data.classifiers_comparison) && data.classifiers_comparison.length > 0) {
             multiClassifierTbody.innerHTML = "";
             data.classifiers_comparison.forEach(c => {
@@ -408,6 +413,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
                 multiClassifierTbody.appendChild(tr);
             });
+
+            // Populate multi-classifier consensus agreement banner
+            if (consensusBanner && data.consensus) {
+                const con = data.consensus;
+                consensusBanner.style.display = "block";
+
+                if (con.has_disagreement) {
+                    consensusBanner.className = "consensus-banner consensus-disagreement";
+                    if (consensusBadge) {
+                        consensusBadge.className = "consensus-badge badge-warning";
+                        consensusBadge.textContent = `⚠️ ${con.status_label}`;
+                    }
+                } else {
+                    consensusBanner.className = "consensus-banner consensus-unanimous";
+                    if (consensusBadge) {
+                        consensusBadge.className = "consensus-badge badge-success";
+                        consensusBadge.textContent = `✅ ${con.status_label}`;
+                    }
+                }
+
+                if (consensusRatioText) {
+                    consensusRatioText.textContent = `${con.agreement_ratio} Models (${con.agreement_percentage} Concordance)`;
+                }
+                if (consensusExplanation) {
+                    consensusExplanation.textContent = con.explanation;
+                }
+            } else if (consensusBanner) {
+                consensusBanner.style.display = "none";
+            }
+
             multiClassifierBox.style.display = "block";
         }
 
@@ -441,6 +476,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const multiClassifierBox = document.getElementById("multiClassifierBox");
         const multiClassifierTbody = document.getElementById("multiClassifierTbody");
+        const consensusBanner = document.getElementById("consensusBanner");
+        if (consensusBanner) consensusBanner.style.display = "none";
         if (multiClassifierBox) multiClassifierBox.style.display = "none";
         if (multiClassifierTbody) multiClassifierTbody.innerHTML = "";
     }
@@ -466,9 +503,14 @@ document.addEventListener("DOMContentLoaded", () => {
             // Update badge text based on selected option
             const selectedOption = classifierSelect.options[classifierSelect.selectedIndex];
             if (selectedOption && activeModelAccuracyBadge) {
-                const match = selectedOption.text.match(/Acc:\s*([\d\.]+%)/i);
-                if (match) {
-                    activeModelAccuracyBadge.textContent = `Acc: ${match[1]}`;
+                const matchSens = selectedOption.text.match(/Sens:\s*([\d\.]+%)/i);
+                const matchAcc = selectedOption.text.match(/Acc:\s*([\d\.]+%)/i);
+                if (matchSens && matchAcc) {
+                    activeModelAccuracyBadge.textContent = `Sens: ${matchSens[1]} • Acc: ${matchAcc[1]}`;
+                } else if (matchAcc) {
+                    activeModelAccuracyBadge.textContent = `Acc: ${matchAcc[1]}`;
+                } else {
+                    activeModelAccuracyBadge.textContent = "ResNet50 / PyTorch";
                 }
             }
         });
@@ -545,7 +587,11 @@ document.addEventListener("DOMContentLoaded", () => {
             // Refresh individual heatmap image
             if (cmHeatmapImg) {
                 const imgKey = metrics.key || targetKey || "svm";
-                cmHeatmapImg.src = `${API_BASE_URL}/static/img/confusion_matrix_${imgKey}.png?t=${Date.now()}`;
+                if (metrics.is_deep_learning) {
+                    cmHeatmapImg.src = `${API_BASE_URL}/static/img/dl_confusion_matrix_${imgKey}.png?t=${Date.now()}`;
+                } else {
+                    cmHeatmapImg.src = `${API_BASE_URL}/static/img/confusion_matrix_${imgKey}.png?t=${Date.now()}`;
+                }
             }
 
         } catch (err) {

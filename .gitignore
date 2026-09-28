@@ -21,3 +21,7 @@ data/uploads/*
 Thumbs.db
 .vscode/
 .idea/
+
+# Large Deep Learning Model Weights (>100MB exceeds GitHub limits)
+models/deep_learning/*.pt
+!models/deep_learning/.gitkeep

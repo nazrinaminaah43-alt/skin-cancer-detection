@@ -92,6 +92,24 @@ class TestModelInference(unittest.TestCase):
         self.assertIn("cancer_explanation", res)
         self.assertIn("is_skin", res)
 
+    def test_consensus_determination(self):
+        """Should calculate multi-classifier consensus agreement metrics."""
+        img = np.ones((256, 256, 3), dtype=np.uint8) * 210
+        cv2.circle(img, (128, 128), 50, (40, 50, 80), -1)
+
+        preprocessed = self.preprocessor.process(img)
+        res = self.model_service.predict(preprocessed)
+
+        self.assertIn("consensus", res)
+        con = res["consensus"]
+        self.assertIn("prediction", con)
+        self.assertIn("cancer_votes", con)
+        self.assertIn("benign_votes", con)
+        self.assertEqual(con["total_classifiers"], 5)
+        self.assertEqual(con["cancer_votes"] + con["benign_votes"], 5)
+        self.assertIn("agreement_ratio", con)
+        self.assertIn("status_label", con)
+
 
 if __name__ == "__main__":
     unittest.main()

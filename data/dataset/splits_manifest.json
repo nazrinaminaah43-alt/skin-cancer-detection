@@ -1,0 +1,1015 @@
+{
+  "random_seed": 42,
+  "counts": {
+    "total": 200,
+    "train": 140,
+    "val": 30,
+    "test": 30
+  },
+  "train": [
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000000.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000166.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000159.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000102.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000305.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000390.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000173.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000094.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000160.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000111.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000283.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000306.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000172.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000099.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000290.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000279.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000285.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000292.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000304.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000303.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000053.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000009.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000284.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000083.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000018.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000295.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000169.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000066.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000307.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000301.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000011.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000022.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000060.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000071.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000117.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000032.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000037.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000085.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000038.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000059.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000055.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000010.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000116.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000040.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000093.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000023.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000291.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000109.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000157.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000176.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000277.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000097.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000174.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000147.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000101.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000143.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000276.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000072.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000045.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000120.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000061.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000056.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000046.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000065.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000073.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000114.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000078.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000088.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000098.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000090.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000156.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000029.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000155.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000393.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000280.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000052.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000162.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000077.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000004.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000149.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000148.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000163.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000012.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000063.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000087.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000287.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000041.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000033.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000142.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000069.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000110.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000302.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000006.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000027.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000047.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000141.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000014.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000034.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000016.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000070.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000008.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000171.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000021.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000104.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000293.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000310.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000048.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000019.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000106.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000175.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000005.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000296.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000036.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000286.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000170.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000062.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000167.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000015.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000007.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000168.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000042.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000091.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000300.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000074.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000118.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000050.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000139.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000282.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000076.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000299.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000298.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000082.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000058.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000086.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000309.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000089.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000020.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000146.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000308.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000153.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    }
+  ],
+  "val": [
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000001.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000312.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000084.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000095.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000068.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000054.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000030.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000026.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000031.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000151.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000152.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000313.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000288.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000003.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000297.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000013.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000017.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000028.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000100.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000002.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000150.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000144.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000096.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000049.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000039.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000081.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000067.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000092.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000108.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000103.jpg",
+      "label": 0,
+      "class_name": "benign"
+    }
+  ],
+  "test": [
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000057.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000064.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000119.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000115.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000158.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000289.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000113.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000024.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000035.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000112.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000080.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000278.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000165.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000105.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000161.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000051.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000164.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000107.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000025.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000140.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000145.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000079.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000281.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000314.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000043.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000075.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000294.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\benign\\ISIC_0000044.jpg",
+      "label": 0,
+      "class_name": "benign"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000311.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\AML project\\data\\dataset\\malignant\\ISIC_0000154.jpg",
+      "label": 1,
+      "class_name": "malignant"
+    }
+  ]
+}

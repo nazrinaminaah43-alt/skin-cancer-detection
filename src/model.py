@@ -193,6 +193,50 @@ class SkinCancerModel:
                 "color": c_meta.get("color", "#0284c7")
             })
 
+        # Multi-Classifier Consensus & Diagnostic Agreement Calculation
+        cancer_votes = sum(1 for c in classifiers_comparison if c["is_cancer"])
+        total_classifiers = len(classifiers_comparison)
+        benign_votes = total_classifiers - cancer_votes
+
+        consensus_prediction = "MALIGNANT" if cancer_votes > (total_classifiers / 2) else "BENIGN"
+        has_disagreement = (cancer_votes > 0 and benign_votes > 0)
+        majority_count = max(cancer_votes, benign_votes)
+        agreement_ratio = f"{majority_count}/{total_classifiers}"
+        agreement_percentage = f"{(majority_count / total_classifiers) * 100:.0f}%"
+
+        if not has_disagreement:
+            consensus_status = f"Unanimous Agreement ({majority_count}/{total_classifiers} Models)"
+            consensus_explanation = (
+                f"All {total_classifiers} classifiers unanimously agree on {consensus_prediction}. "
+                "High model concordance confirms clear diagnostic signal."
+            )
+        elif majority_count >= 4:
+            consensus_status = f"Strong Majority ({majority_count}/{total_classifiers} Models)"
+            consensus_explanation = (
+                f"{majority_count} of {total_classifiers} classifiers agree on {consensus_prediction} "
+                f"({cancer_votes} Malignant vs {benign_votes} Benign). Minor classifier divergence."
+            )
+        else:
+            consensus_status = f"Model Disagreement ({majority_count}/{total_classifiers} Split)"
+            consensus_explanation = (
+                f"Classifiers are split ({cancer_votes} Malignant vs {benign_votes} Benign). "
+                "Different algorithmic decision boundaries respond differently to borderline lesion features. "
+                "Urgent in-person clinical dermoscopic biopsy is strongly recommended."
+            )
+
+        consensus_info = {
+            "prediction": consensus_prediction,
+            "is_cancer": (consensus_prediction == "MALIGNANT"),
+            "cancer_votes": cancer_votes,
+            "benign_votes": benign_votes,
+            "total_classifiers": total_classifiers,
+            "agreement_ratio": agreement_ratio,
+            "agreement_percentage": agreement_percentage,
+            "has_disagreement": has_disagreement,
+            "status_label": consensus_status,
+            "explanation": consensus_explanation
+        }
+
         # ABCD feature summary for UI display
         feature_summary = self.feature_extractor.extract_summary(preprocessed_data)
 
@@ -220,7 +264,8 @@ class SkinCancerModel:
             "model_accuracy": test_accuracy,
             "kernel": kernel,
             "feature_summary": feature_summary,
-            "classifiers_comparison": classifiers_comparison
+            "classifiers_comparison": classifiers_comparison,
+            "consensus": consensus_info
         }
 
     def get_classifier_metadata(self, key: str) -> Dict[str, Any]:

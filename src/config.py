@@ -12,8 +12,10 @@ UPLOADS_DIR = DATA_DIR / "uploads"
 SAMPLES_DIR = DATA_DIR / "samples"
 MODELS_DIR = BASE_DIR / "models"
 
+DL_MODELS_DIR = MODELS_DIR / "deep_learning"
+
 # Ensure directories exist
-for folder in [DATA_DIR, UPLOADS_DIR, SAMPLES_DIR, MODELS_DIR]:
+for folder in [DATA_DIR, UPLOADS_DIR, SAMPLES_DIR, MODELS_DIR, DL_MODELS_DIR]:
     folder.mkdir(parents=True, exist_ok=True)
 
 class Config:
@@ -53,3 +55,33 @@ class Config:
     
     # Image Preprocessing target resolution
     IMAGE_SIZE = (256, 256)
+
+    # ==============================================================================
+    # Deep Learning Configuration & Model Checkpoint Paths
+    # ==============================================================================
+    DATASET_DIR = str(DATA_DIR / "dataset")
+    SPLITS_MANIFEST_PATH = str(DATA_DIR / "dataset" / "splits_manifest.json")
+    
+    DL_IMAGE_SIZE = (224, 224)
+    DL_BATCH_SIZE = 16
+    DL_RANDOM_SEED = 42
+    DL_EPOCHS = 12
+    DL_LEARNING_RATE = 1e-4
+    DL_NUM_CLASSES = 2
+    DL_CLASS_NAMES = ["benign", "malignant"]
+    DL_CLASS_MAPPING = {"benign": 0, "malignant": 1}
+    
+    DL_MODELS_DIR = str(MODELS_DIR / "deep_learning")
+    DL_METRICS_PATH = str(MODELS_DIR / "deep_learning_metrics.json")
+    DL_SELECTED_MODEL_INFO_PATH = str(MODELS_DIR / "selected_model_info.json")
+    DL_CONFIG_PATH = str(MODELS_DIR / "deep_learning_config.json")
+    
+    DL_MODEL_PATHS = {
+        "custom_cnn": str(MODELS_DIR / "deep_learning" / "custom_cnn.pt"),
+        "mobilenet_v2": str(MODELS_DIR / "deep_learning" / "mobilenet_v2.pt"),
+        "resnet50": str(MODELS_DIR / "deep_learning" / "resnet50.pt"),
+        "efficientnet_b0": str(MODELS_DIR / "deep_learning" / "efficientnet_b0.pt"),
+        "vgg16": str(MODELS_DIR / "deep_learning" / "vgg16.pt"),
+        "best": str(MODELS_DIR / "deep_learning" / "best_deep_learning_model.pt"),
+    }
+

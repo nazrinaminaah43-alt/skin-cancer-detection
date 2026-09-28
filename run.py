@@ -1,6 +1,6 @@
 """
 Main application launcher for Skin Cancer Detection Dashboard.
-Executes Flask server with local SQLite database and pre-trained SVM model.
+Executes Flask server with local SQLite database and 5 pre-trained ML classifiers.
 """
 
 import os
@@ -25,12 +25,15 @@ def verify_environment():
     print(f"[*] Uploads Folder   : {Config.UPLOADS_FOLDER}")
     print(f"[*] Models Folder    : {Config.MODELS_FOLDER}")
 
-    model_ready = os.path.exists(Config.MODEL_PATH)
+    model_paths = getattr(Config, "MODEL_PATHS", {"svm": Config.MODEL_PATH})
+    all_models_ready = all(os.path.exists(p) for p in model_paths.values())
     scaler_ready = os.path.exists(Config.SCALER_PATH)
     metrics_ready = os.path.exists(Config.METRICS_PATH)
 
-    if model_ready and scaler_ready and metrics_ready:
-        print("[+] SVM Model and Scaler artifacts verified: READY")
+    if all_models_ready and scaler_ready and metrics_ready:
+        print(f"[+] All {len(model_paths)} ML Classifiers, Scaler, and Metrics verified: READY")
+    elif os.path.exists(Config.MODEL_PATH) and scaler_ready and metrics_ready:
+        print("[+] Primary SVM Model and Scaler artifacts verified: READY")
     else:
         print("[!] Model artifacts missing. Auto-training will be initiated on first run.")
 

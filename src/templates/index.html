@@ -29,8 +29,11 @@
                 </div>
             </div>
             <div class="header-right">
+                <a href="{{ url_for('api.model_comparison_page') }}" class="btn-nav-comparison" title="View Deep Learning Benchmarks & Model Comparison">
+                    <span>📊 Model Comparison</span>
+                </a>
                 <div class="header-badges">
-                    <span class="badge badge-tech"><span class="status-dot"></span> SVM (RBF Kernel)</span>
+                    <span class="badge badge-accent">ResNet50 / PyTorch</span>
                     <span class="badge badge-tech">OpenCV 4.x</span>
                 </div>
                 {% if user %}
@@ -118,22 +121,37 @@
                     </div>
                 </div>
 
-                <!-- ML Classifier Selector -->
+                <!-- ML & DL Classifier Selector -->
                 <div class="classifier-selector-box">
                     <div class="classifier-label-row">
                         <label for="classifierSelect" class="classifier-label">
-                            <span class="icon">⚙️</span> <strong>Select ML Classifier:</strong>
+                            <span class="icon">⚙️</span> <strong>Classifier & Architecture:</strong>
                         </label>
-                        <span class="badge badge-accent" id="activeModelAccuracyBadge">Acc: 77.5%</span>
+                        <span class="badge badge-accent" id="activeModelAccuracyBadge">Recall: 80.0% • Acc: 66.7%</span>
                     </div>
                     <div class="classifier-select-wrap">
-                        <select id="classifierSelect" class="form-input form-select classifier-dropdown" aria-label="Select ML Model">
-                            <option value="gradient_boosting" selected>Gradient Boosting Classifier (Acc: 77.5% • F1: 74.3%) [Top Performer]</option>
-                            <option value="logistic_regression">Logistic Regression (Acc: 77.5% • F1: 74.3%)</option>
-                            <option value="svm">Support Vector Machine - SVM RBF (Acc: 75.0% • F1: 72.2%)</option>
-                            <option value="random_forest">Random Forest Classifier (Acc: 75.0% • F1: 70.6%)</option>
-                            <option value="knn">K-Nearest Neighbors - KNN (Acc: 72.5% • F1: 68.6%)</option>
+                        <select id="classifierSelect" class="form-input form-select classifier-dropdown" aria-label="Select Model Architecture">
+                            <optgroup label="⚡ Deep Learning Models (PyTorch / Transfer Learning)">
+                                <option value="deep_learning" selected>⭐ Deep Learning: ResNet50 (Selected Best Model - Val Score: 0.7016)</option>
+                                <option value="mobilenet_v2">MobileNetV2 (Test Sens: 93.3% • Acc: 86.7%)</option>
+                                <option value="resnet50">ResNet50 (Test Sens: 80.0% • Acc: 66.7%)</option>
+                                <option value="vgg16">VGG16 (Test Sens: 80.0% • Acc: 76.7%)</option>
+                                <option value="custom_cnn">Custom CNN (Test Sens: 73.3% • Acc: 83.3%)</option>
+                                <option value="efficientnet_b0">EfficientNetB0 (Test Acc: 40.0%)</option>
+                            </optgroup>
+                            <optgroup label="📊 Classical Machine Learning (OpenCV ABCD Features)">
+                                <option value="gradient_boosting">Gradient Boosting Classifier (Acc: 77.5% • F1: 74.3%)</option>
+                                <option value="logistic_regression">Logistic Regression (Acc: 77.5% • F1: 74.3%)</option>
+                                <option value="svm">Support Vector Machine - SVM RBF (Acc: 75.0% • F1: 72.2%)</option>
+                                <option value="random_forest">Random Forest Classifier (Acc: 75.0% • F1: 70.6%)</option>
+                                <option value="knn">K-Nearest Neighbors - KNN (Acc: 72.5% • F1: 68.6%)</option>
+                            </optgroup>
                         </select>
+                    </div>
+                    <div style="margin-top: 0.5rem; text-align: right;">
+                        <a href="{{ url_for('api.model_comparison_page') }}" style="font-size: 0.78rem; color: var(--primary); text-decoration: none; font-weight: 600;">
+                            📊 Compare All 5 Deep Learning Models & Review Benchmarks →
+                        </a>
                     </div>
                 </div>
 
@@ -271,6 +289,17 @@
                         </div>
                         <p class="multi-classifier-desc">Separate real-time detection results and benchmark test accuracies for this lesion:</p>
                         
+                        <!-- Multi-Classifier Consensus Diagnostic Agreement Banner -->
+                        <div class="consensus-banner" id="consensusBanner" style="display: none;">
+                            <div class="consensus-banner-header">
+                                <span class="consensus-badge" id="consensusBadge">Consensus: 5/5</span>
+                                <span class="consensus-ratio-text" id="consensusRatioText">100% Agreement</span>
+                            </div>
+                            <p class="consensus-explanation" id="consensusExplanation">
+                                All 5 classifiers agree on this detection.
+                            </p>
+                        </div>
+
                         <div class="table-responsive">
                             <table class="comparison-table">
                                 <thead>

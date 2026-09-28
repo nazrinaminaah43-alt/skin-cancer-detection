@@ -1,0 +1,44 @@
+[
+  {
+    "id": "sample_benign_nevus_1.jpg",
+    "title": "Benign Melanocytic Nevus",
+    "type": "Benign",
+    "filename": "sample_benign_nevus_1.jpg",
+    "relative_url": "/samples/sample_benign_nevus_1.jpg"
+  },
+  {
+    "id": "sample_benign_nevus_2.jpg",
+    "title": "Benign Dermal Nevus",
+    "type": "Benign",
+    "filename": "sample_benign_nevus_2.jpg",
+    "relative_url": "/samples/sample_benign_nevus_2.jpg"
+  },
+  {
+    "id": "sample_benign_keratosis_3.jpg",
+    "title": "Benign Seborrheic Keratosis",
+    "type": "Benign",
+    "filename": "sample_benign_keratosis_3.jpg",
+    "relative_url": "/samples/sample_benign_keratosis_3.jpg"
+  },
+  {
+    "id": "sample_malignant_melanoma_1.jpg",
+    "title": "Malignant Melanoma (Superficial)",
+    "type": "Malignant",
+    "filename": "sample_malignant_melanoma_1.jpg",
+    "relative_url": "/samples/sample_malignant_melanoma_1.jpg"
+  },
+  {
+    "id": "sample_malignant_melanoma_2.jpg",
+    "title": "Malignant Melanoma (Invasive)",
+    "type": "Malignant",
+    "filename": "sample_malignant_melanoma_2.jpg",
+    "relative_url": "/samples/sample_malignant_melanoma_2.jpg"
+  },
+  {
+    "id": "sample_malignant_carcinoma_3.jpg",
+    "title": "Basal Cell Carcinoma",
+    "type": "Malignant",
+    "filename": "sample_malignant_carcinoma_3.jpg",
+    "relative_url": "/samples/sample_malignant_carcinoma_3.jpg"
+  }
+]

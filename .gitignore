@@ -1,0 +1,23 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Database & runtime uploads
+data/database.db
+data/uploads/*
+!data/uploads/.gitkeep
+
+# Operating system / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

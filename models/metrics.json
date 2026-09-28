@@ -1,0 +1,52 @@
+{
+  "model_name": "Support Vector Machine (SVM)",
+  "kernel": "Radial Basis Function (RBF)",
+  "hyperparameters": {
+    "C": 2.0,
+    "kernel": "rbf",
+    "gamma": "scale",
+    "class_weight": "balanced",
+    "calibration": "CalibratedClassifierCV (5-Fold)"
+  },
+  "classes": [
+    "Benign",
+    "Malignant"
+  ],
+  "accuracy": 0.75,
+  "precision": 0.8125,
+  "recall": 0.65,
+  "f1_score": 0.7222,
+  "accuracy_percentage": "75.0%",
+  "precision_percentage": "81.2%",
+  "recall_percentage": "65.0%",
+  "f1_score_percentage": "72.2%",
+  "cv_mean_accuracy": 0.7438,
+  "cv_std_accuracy": 0.0538,
+  "confusion_matrix": {
+    "matrix": [
+      [
+        17,
+        3
+      ],
+      [
+        7,
+        13
+      ]
+    ],
+    "labels": [
+      "Benign",
+      "Malignant"
+    ],
+    "true_negatives": 17,
+    "false_positives": 3,
+    "false_negatives": 7,
+    "true_positives": 13
+  },
+  "dataset_split": {
+    "total_samples": 200,
+    "train_samples": 160,
+    "test_samples": 40,
+    "features_extracted": 46
+  },
+  "trained_at": "2026-09-27 13:17:34 UTC"
+}

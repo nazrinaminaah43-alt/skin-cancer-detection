@@ -1,0 +1,201 @@
+filename,class,isic_id,diagnosis,path
+ISIC_0000000.jpg,benign,ISIC_0000000,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000000.jpg
+ISIC_0000001.jpg,benign,ISIC_0000001,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000001.jpg
+ISIC_0000003.jpg,benign,ISIC_0000003,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000003.jpg
+ISIC_0000005.jpg,benign,ISIC_0000005,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000005.jpg
+ISIC_0000006.jpg,benign,ISIC_0000006,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000006.jpg
+ISIC_0000007.jpg,benign,ISIC_0000007,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000007.jpg
+ISIC_0000008.jpg,benign,ISIC_0000008,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000008.jpg
+ISIC_0000009.jpg,benign,ISIC_0000009,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000009.jpg
+ISIC_0000010.jpg,benign,ISIC_0000010,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000010.jpg
+ISIC_0000011.jpg,benign,ISIC_0000011,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000011.jpg
+ISIC_0000012.jpg,benign,ISIC_0000012,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000012.jpg
+ISIC_0000014.jpg,benign,ISIC_0000014,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000014.jpg
+ISIC_0000015.jpg,benign,ISIC_0000015,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000015.jpg
+ISIC_0000016.jpg,benign,ISIC_0000016,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000016.jpg
+ISIC_0000017.jpg,benign,ISIC_0000017,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000017.jpg
+ISIC_0000018.jpg,benign,ISIC_0000018,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000018.jpg
+ISIC_0000019.jpg,benign,ISIC_0000019,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000019.jpg
+ISIC_0000020.jpg,benign,ISIC_0000020,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000020.jpg
+ISIC_0000021.jpg,benign,ISIC_0000021,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000021.jpg
+ISIC_0000023.jpg,benign,ISIC_0000023,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000023.jpg
+ISIC_0000024.jpg,benign,ISIC_0000024,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000024.jpg
+ISIC_0000025.jpg,benign,ISIC_0000025,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000025.jpg
+ISIC_0000027.jpg,benign,ISIC_0000027,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000027.jpg
+ISIC_0000028.jpg,benign,ISIC_0000028,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000028.jpg
+ISIC_0000032.jpg,benign,ISIC_0000032,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000032.jpg
+ISIC_0000033.jpg,benign,ISIC_0000033,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000033.jpg
+ISIC_0000034.jpg,benign,ISIC_0000034,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000034.jpg
+ISIC_0000037.jpg,benign,ISIC_0000037,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000037.jpg
+ISIC_0000038.jpg,benign,ISIC_0000038,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000038.jpg
+ISIC_0000039.jpg,benign,ISIC_0000039,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000039.jpg
+ISIC_0000041.jpg,benign,ISIC_0000041,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000041.jpg
+ISIC_0000042.jpg,benign,ISIC_0000042,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000042.jpg
+ISIC_0000044.jpg,benign,ISIC_0000044,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000044.jpg
+ISIC_0000045.jpg,benign,ISIC_0000045,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000045.jpg
+ISIC_0000047.jpg,benign,ISIC_0000047,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000047.jpg
+ISIC_0000048.jpg,benign,ISIC_0000048,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000048.jpg
+ISIC_0000050.jpg,benign,ISIC_0000050,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000050.jpg
+ISIC_0000051.jpg,benign,ISIC_0000051,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000051.jpg
+ISIC_0000052.jpg,benign,ISIC_0000052,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000052.jpg
+ISIC_0000053.jpg,benign,ISIC_0000053,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000053.jpg
+ISIC_0000055.jpg,benign,ISIC_0000055,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000055.jpg
+ISIC_0000057.jpg,benign,ISIC_0000057,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000057.jpg
+ISIC_0000058.jpg,benign,ISIC_0000058,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000058.jpg
+ISIC_0000059.jpg,benign,ISIC_0000059,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000059.jpg
+ISIC_0000060.jpg,benign,ISIC_0000060,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000060.jpg
+ISIC_0000061.jpg,benign,ISIC_0000061,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000061.jpg
+ISIC_0000062.jpg,benign,ISIC_0000062,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000062.jpg
+ISIC_0000063.jpg,benign,ISIC_0000063,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000063.jpg
+ISIC_0000064.jpg,benign,ISIC_0000064,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000064.jpg
+ISIC_0000065.jpg,benign,ISIC_0000065,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000065.jpg
+ISIC_0000066.jpg,benign,ISIC_0000066,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000066.jpg
+ISIC_0000067.jpg,benign,ISIC_0000067,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000067.jpg
+ISIC_0000068.jpg,benign,ISIC_0000068,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000068.jpg
+ISIC_0000069.jpg,benign,ISIC_0000069,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000069.jpg
+ISIC_0000071.jpg,benign,ISIC_0000071,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000071.jpg
+ISIC_0000072.jpg,benign,ISIC_0000072,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000072.jpg
+ISIC_0000073.jpg,benign,ISIC_0000073,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000073.jpg
+ISIC_0000075.jpg,benign,ISIC_0000075,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000075.jpg
+ISIC_0000079.jpg,benign,ISIC_0000079,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000079.jpg
+ISIC_0000080.jpg,benign,ISIC_0000080,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000080.jpg
+ISIC_0000081.jpg,benign,ISIC_0000081,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000081.jpg
+ISIC_0000082.jpg,benign,ISIC_0000082,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000082.jpg
+ISIC_0000083.jpg,benign,ISIC_0000083,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000083.jpg
+ISIC_0000084.jpg,benign,ISIC_0000084,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000084.jpg
+ISIC_0000085.jpg,benign,ISIC_0000085,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000085.jpg
+ISIC_0000086.jpg,benign,ISIC_0000086,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000086.jpg
+ISIC_0000087.jpg,benign,ISIC_0000087,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000087.jpg
+ISIC_0000088.jpg,benign,ISIC_0000088,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000088.jpg
+ISIC_0000089.jpg,benign,ISIC_0000089,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000089.jpg
+ISIC_0000090.jpg,benign,ISIC_0000090,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000090.jpg
+ISIC_0000091.jpg,benign,ISIC_0000091,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000091.jpg
+ISIC_0000092.jpg,benign,ISIC_0000092,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000092.jpg
+ISIC_0000093.jpg,benign,ISIC_0000093,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000093.jpg
+ISIC_0000094.jpg,benign,ISIC_0000094,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000094.jpg
+ISIC_0000095.jpg,benign,ISIC_0000095,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000095.jpg
+ISIC_0000096.jpg,benign,ISIC_0000096,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000096.jpg
+ISIC_0000097.jpg,benign,ISIC_0000097,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000097.jpg
+ISIC_0000098.jpg,benign,ISIC_0000098,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000098.jpg
+ISIC_0000099.jpg,benign,ISIC_0000099,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000099.jpg
+ISIC_0000100.jpg,benign,ISIC_0000100,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000100.jpg
+ISIC_0000101.jpg,benign,ISIC_0000101,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000101.jpg
+ISIC_0000102.jpg,benign,ISIC_0000102,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000102.jpg
+ISIC_0000103.jpg,benign,ISIC_0000103,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000103.jpg
+ISIC_0000104.jpg,benign,ISIC_0000104,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000104.jpg
+ISIC_0000105.jpg,benign,ISIC_0000105,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000105.jpg
+ISIC_0000106.jpg,benign,ISIC_0000106,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000106.jpg
+ISIC_0000107.jpg,benign,ISIC_0000107,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000107.jpg
+ISIC_0000108.jpg,benign,ISIC_0000108,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000108.jpg
+ISIC_0000109.jpg,benign,ISIC_0000109,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000109.jpg
+ISIC_0000110.jpg,benign,ISIC_0000110,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000110.jpg
+ISIC_0000111.jpg,benign,ISIC_0000111,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000111.jpg
+ISIC_0000112.jpg,benign,ISIC_0000112,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000112.jpg
+ISIC_0000113.jpg,benign,ISIC_0000113,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000113.jpg
+ISIC_0000114.jpg,benign,ISIC_0000114,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000114.jpg
+ISIC_0000115.jpg,benign,ISIC_0000115,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000115.jpg
+ISIC_0000116.jpg,benign,ISIC_0000116,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000116.jpg
+ISIC_0000117.jpg,benign,ISIC_0000117,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000117.jpg
+ISIC_0000118.jpg,benign,ISIC_0000118,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000118.jpg
+ISIC_0000119.jpg,benign,ISIC_0000119,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000119.jpg
+ISIC_0000120.jpg,benign,ISIC_0000120,Benign melanocytic proliferations,data/dataset/benign/ISIC_0000120.jpg
+ISIC_0000002.jpg,malignant,ISIC_0000002,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000002.jpg
+ISIC_0000004.jpg,malignant,ISIC_0000004,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000004.jpg
+ISIC_0000013.jpg,malignant,ISIC_0000013,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000013.jpg
+ISIC_0000022.jpg,malignant,ISIC_0000022,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000022.jpg
+ISIC_0000026.jpg,malignant,ISIC_0000026,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000026.jpg
+ISIC_0000029.jpg,malignant,ISIC_0000029,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000029.jpg
+ISIC_0000030.jpg,malignant,ISIC_0000030,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000030.jpg
+ISIC_0000031.jpg,malignant,ISIC_0000031,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000031.jpg
+ISIC_0000035.jpg,malignant,ISIC_0000035,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000035.jpg
+ISIC_0000036.jpg,malignant,ISIC_0000036,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000036.jpg
+ISIC_0000040.jpg,malignant,ISIC_0000040,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000040.jpg
+ISIC_0000043.jpg,malignant,ISIC_0000043,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000043.jpg
+ISIC_0000046.jpg,malignant,ISIC_0000046,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000046.jpg
+ISIC_0000049.jpg,malignant,ISIC_0000049,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000049.jpg
+ISIC_0000054.jpg,malignant,ISIC_0000054,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000054.jpg
+ISIC_0000056.jpg,malignant,ISIC_0000056,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000056.jpg
+ISIC_0000070.jpg,malignant,ISIC_0000070,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000070.jpg
+ISIC_0000074.jpg,malignant,ISIC_0000074,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000074.jpg
+ISIC_0000076.jpg,malignant,ISIC_0000076,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000076.jpg
+ISIC_0000077.jpg,malignant,ISIC_0000077,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000077.jpg
+ISIC_0000078.jpg,malignant,ISIC_0000078,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000078.jpg
+ISIC_0000139.jpg,malignant,ISIC_0000139,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000139.jpg
+ISIC_0000140.jpg,malignant,ISIC_0000140,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000140.jpg
+ISIC_0000141.jpg,malignant,ISIC_0000141,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000141.jpg
+ISIC_0000142.jpg,malignant,ISIC_0000142,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000142.jpg
+ISIC_0000143.jpg,malignant,ISIC_0000143,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000143.jpg
+ISIC_0000144.jpg,malignant,ISIC_0000144,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000144.jpg
+ISIC_0000145.jpg,malignant,ISIC_0000145,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000145.jpg
+ISIC_0000146.jpg,malignant,ISIC_0000146,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000146.jpg
+ISIC_0000147.jpg,malignant,ISIC_0000147,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000147.jpg
+ISIC_0000148.jpg,malignant,ISIC_0000148,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000148.jpg
+ISIC_0000149.jpg,malignant,ISIC_0000149,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000149.jpg
+ISIC_0000150.jpg,malignant,ISIC_0000150,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000150.jpg
+ISIC_0000151.jpg,malignant,ISIC_0000151,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000151.jpg
+ISIC_0000152.jpg,malignant,ISIC_0000152,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000152.jpg
+ISIC_0000153.jpg,malignant,ISIC_0000153,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000153.jpg
+ISIC_0000154.jpg,malignant,ISIC_0000154,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000154.jpg
+ISIC_0000155.jpg,malignant,ISIC_0000155,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000155.jpg
+ISIC_0000156.jpg,malignant,ISIC_0000156,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000156.jpg
+ISIC_0000157.jpg,malignant,ISIC_0000157,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000157.jpg
+ISIC_0000158.jpg,malignant,ISIC_0000158,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000158.jpg
+ISIC_0000159.jpg,malignant,ISIC_0000159,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000159.jpg
+ISIC_0000160.jpg,malignant,ISIC_0000160,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000160.jpg
+ISIC_0000161.jpg,malignant,ISIC_0000161,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000161.jpg
+ISIC_0000162.jpg,malignant,ISIC_0000162,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000162.jpg
+ISIC_0000163.jpg,malignant,ISIC_0000163,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000163.jpg
+ISIC_0000164.jpg,malignant,ISIC_0000164,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000164.jpg
+ISIC_0000165.jpg,malignant,ISIC_0000165,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000165.jpg
+ISIC_0000166.jpg,malignant,ISIC_0000166,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000166.jpg
+ISIC_0000167.jpg,malignant,ISIC_0000167,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000167.jpg
+ISIC_0000168.jpg,malignant,ISIC_0000168,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000168.jpg
+ISIC_0000169.jpg,malignant,ISIC_0000169,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000169.jpg
+ISIC_0000170.jpg,malignant,ISIC_0000170,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000170.jpg
+ISIC_0000171.jpg,malignant,ISIC_0000171,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000171.jpg
+ISIC_0000172.jpg,malignant,ISIC_0000172,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000172.jpg
+ISIC_0000173.jpg,malignant,ISIC_0000173,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000173.jpg
+ISIC_0000174.jpg,malignant,ISIC_0000174,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000174.jpg
+ISIC_0000175.jpg,malignant,ISIC_0000175,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000175.jpg
+ISIC_0000176.jpg,malignant,ISIC_0000176,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000176.jpg
+ISIC_0000276.jpg,malignant,ISIC_0000276,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000276.jpg
+ISIC_0000277.jpg,malignant,ISIC_0000277,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000277.jpg
+ISIC_0000278.jpg,malignant,ISIC_0000278,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000278.jpg
+ISIC_0000279.jpg,malignant,ISIC_0000279,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000279.jpg
+ISIC_0000280.jpg,malignant,ISIC_0000280,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000280.jpg
+ISIC_0000281.jpg,malignant,ISIC_0000281,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000281.jpg
+ISIC_0000282.jpg,malignant,ISIC_0000282,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000282.jpg
+ISIC_0000283.jpg,malignant,ISIC_0000283,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000283.jpg
+ISIC_0000284.jpg,malignant,ISIC_0000284,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000284.jpg
+ISIC_0000285.jpg,malignant,ISIC_0000285,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000285.jpg
+ISIC_0000286.jpg,malignant,ISIC_0000286,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000286.jpg
+ISIC_0000287.jpg,malignant,ISIC_0000287,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000287.jpg
+ISIC_0000288.jpg,malignant,ISIC_0000288,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000288.jpg
+ISIC_0000289.jpg,malignant,ISIC_0000289,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000289.jpg
+ISIC_0000290.jpg,malignant,ISIC_0000290,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000290.jpg
+ISIC_0000291.jpg,malignant,ISIC_0000291,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000291.jpg
+ISIC_0000292.jpg,malignant,ISIC_0000292,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000292.jpg
+ISIC_0000293.jpg,malignant,ISIC_0000293,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000293.jpg
+ISIC_0000294.jpg,malignant,ISIC_0000294,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000294.jpg
+ISIC_0000295.jpg,malignant,ISIC_0000295,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000295.jpg
+ISIC_0000296.jpg,malignant,ISIC_0000296,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000296.jpg
+ISIC_0000297.jpg,malignant,ISIC_0000297,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000297.jpg
+ISIC_0000298.jpg,malignant,ISIC_0000298,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000298.jpg
+ISIC_0000299.jpg,malignant,ISIC_0000299,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000299.jpg
+ISIC_0000300.jpg,malignant,ISIC_0000300,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000300.jpg
+ISIC_0000301.jpg,malignant,ISIC_0000301,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000301.jpg
+ISIC_0000302.jpg,malignant,ISIC_0000302,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000302.jpg
+ISIC_0000303.jpg,malignant,ISIC_0000303,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000303.jpg
+ISIC_0000304.jpg,malignant,ISIC_0000304,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000304.jpg
+ISIC_0000305.jpg,malignant,ISIC_0000305,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000305.jpg
+ISIC_0000306.jpg,malignant,ISIC_0000306,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000306.jpg
+ISIC_0000307.jpg,malignant,ISIC_0000307,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000307.jpg
+ISIC_0000308.jpg,malignant,ISIC_0000308,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000308.jpg
+ISIC_0000309.jpg,malignant,ISIC_0000309,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000309.jpg
+ISIC_0000310.jpg,malignant,ISIC_0000310,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000310.jpg
+ISIC_0000311.jpg,malignant,ISIC_0000311,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000311.jpg
+ISIC_0000312.jpg,malignant,ISIC_0000312,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000312.jpg
+ISIC_0000313.jpg,malignant,ISIC_0000313,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000313.jpg
+ISIC_0000314.jpg,malignant,ISIC_0000314,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000314.jpg
+ISIC_0000390.jpg,malignant,ISIC_0000390,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000390.jpg
+ISIC_0000393.jpg,malignant,ISIC_0000393,Malignant melanocytic proliferations (Melanoma),data/dataset/malignant/ISIC_0000393.jpg

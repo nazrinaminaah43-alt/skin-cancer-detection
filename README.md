@@ -4,6 +4,8 @@ A full-stack, clinical-engineering web application for automated dermatological 
 
 The system allows users to upload dermoscopic skin lesion images through an intuitive, interactive web dashboard, preprocesses images with medical-grade image enhancement and hair-removal algorithms, extracts physiological **ABCD** (Asymmetry, Border, Color, Diameter/Texture) features, classifies the lesion as **Benign** or **Malignant**, logs results to an SQL database, and displays verified performance metrics and confusion matrices dynamically fetched from the model.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/nazrinaminaah43-alt/skin-cancer-detection)
+
 ---
 
 ## 🏛️ System Architecture
